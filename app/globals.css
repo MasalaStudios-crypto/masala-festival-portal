@@ -1,0 +1,57 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+p.subtitle { color: #aaa; margin-bottom: 2.5rem; }
+
+form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+label { font-size: 0.875rem; font-weight: 600; color: #ccc; margin-bottom: 0.25rem; display: block; }
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus { border-color: #e25822; }
+textarea { resize: vertical; min-height: 120px; }
+select option { background: #1a1a1a; }
+
+.checkbox-row { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: #ccc; }
+.checkbox-row input[type=checkbox] { width: 18px; height: 18px; accent-color: #e25822; }
+
+button[type=submit] {
+  padding: 0.875rem 2rem;
+  background: #e25822;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button[type=submit]:hover { background: #c94d1d; }
+button[type=submit]:disabled { background: #555; cursor: not-allowed; }
+
+.success { background: #0d3320; border: 1px solid #1a6b3a; border-radius: 8px; padding: 1.5rem; text-align: center; }
+.success h2 { color: #4ade80; margin-bottom: 0.5rem; }
+.error-msg { color: #f87171; font-size: 0.875rem; }
